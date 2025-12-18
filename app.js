@@ -1063,4 +1063,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (passwordInput) passwordInput.addEventListener('input', validatePasswords);
     if (confirmPasswordInput) confirmPasswordInput.addEventListener('input', validatePasswords);
-});
+});dfdg
