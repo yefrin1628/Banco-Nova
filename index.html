@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Nova - Su Socio Financiero</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-building-columns"></i>
+                <span>Banco Nova</span>
+            </div>
+            <div class="nav-wrapper" id="navWrapper">
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#tarjetas">Tarjetas</a></li>
+                        <li><a href="#seguridad">Seguridad</a></li>
+                        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button type="button" class="btn btn-outline" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i> Ingresar
+                    </button>
+                    <button type="button" class="btn btn-primary" id="openAccountBtn">
+                        <i class="fas fa-user-plus"></i> Abrir Cuenta
+                    </button>
+                </div>
+                <div id="userMenu" style="display: none; align-items: center; gap: 1rem;">
+                    <span id="welcomeUser" style="color: white; font-weight: 500; font-size: 0.95rem;"></span>
+                    <button id="logoutBtn" class="btn btn-danger">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </button>
+                </div>
+            </div>
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="container hero-content">
+                <h1>Su Confianza, Nuestra Responsabilidad</h1>
+                <p>En Banco Nova, protegemos su dinero y lo hacemos crecer con soluciones financieras seguras, innovadoras y a medida de sus necesidades.</p>
+                <div class="cta-buttons">
+                    <button type="button" id="openAccountBtnHero" class="btn btn-secondary">Abrir Cuenta Gratuita</button>
+                    <button type="button" class="btn btn-primary" id="heroCreditBtn">Solicitar Crédito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits" id="productos">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Beneficios Principales</h2>
+                    <p>Descubra por qué más de 2 millones de clientes confían en nosotros</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Seguridad Total</h3>
+                        <p>Certificación SSL, autenticación en dos pasos y monitoreo 24/7 contra fraudes.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Banca Móvil</h3>
+                        <p>Acceda a todas sus cuentas y servicios desde cualquier dispositivo, en cualquier momento.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Mejores Rendimientos</h3>
+                        <p>Tasas competitivas en cuentas de ahorro, CDTs y fondos de inversión.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Atención 24/7</h3>
+                        <p>Soporte personalizado disponible todos los días, las 24 horas del día.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards Product Section -->
+        <section class="cards-section" id="tarjetas">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nuestras Tarjetas</h2>
+                    <p>Una tarjeta para cada una de tus necesidades</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="product-card">
+                        <div class="card-design debit"><span>Débito</span></div>
+                        <h3>Tarjeta Débito</h3>
+                        <p>Acceso directo a tus fondos, para compras y retiros en todo el mundo.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="card-design credit-classic"><span>Clásica</span></div>
+                        <h3>Crédito Clásica</h3>
+                        <p>Ideal para tus compras diarias, con un cupo flexible y beneficios básicos.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="card-design credit-gold"><span>Oro</span></div>
+                        <h3>Crédito Oro</h3>
+                        <p>Mayores cupos, seguros de viaje y asistencia internacional para tus aventuras.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="card-design credit-platinum"><span>Platinum</span></div>
+                        <h3>Crédito Platinum</h3>
+                        <p>Beneficios exclusivos, acceso a salas VIP y el más alto nivel de servicio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us" id="sobre-nosotros">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nuestra Trayectoria</h2>
+                    <p>Comprometidos con el futuro financiero de Colombia</p>
+                </div>
+                <div class="about-us-content">
+                    <div class="about-us-image">
+                        <img src="https://placehold.co/600x450/1e3a8a/f8fafc?text=Banco+Nova" alt="Oficinas corporativas de Banco Nova">
+                    </div>
+                    <div class="about-us-text">
+                        <h3>Más de 20 años construyendo confianza</h3>
+                        <p>Desde nuestra fundación en 2005, en Banco Nova hemos trabajado incansablemente para ser el socio financiero preferido por los colombianos.</p>
+                        <div class="about-us-values">
+                            <div class="value-item"><i class="fas fa-check-circle"></i> <strong>Integridad:</strong> Actuamos con honestidad y transparencia.</div>
+                            <div class="value-item"><i class="fas fa-check-circle"></i> <strong>Innovación:</strong> Buscamos constantemente nuevas y mejores formas de servirle.</div>
+                            <div class="value-item"><i class="fas fa-check-circle"></i> <strong>Compromiso:</strong> Su éxito es nuestro principal objetivo.</div>
+                        </div>
+                        <a href="#contacto" class="btn btn-primary">Contáctenos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="security" id="seguridad">
+            <div class="container">
+                <div class="security-content">
+                    <div class="security-text">
+                        <h2>Seguridad y Confianza</h2>
+                        <p>En Banco Nova, la seguridad de su información y transacciones es nuestra máxima prioridad.</p>
+                        <div class="security-features">
+                            <div class="security-feature">
+                                <i class="fas fa-lock"></i>
+                                <div>
+                                    <h4>Certificado SSL 🔒</h4>
+                                    <p>Todas las comunicaciones están encriptadas con tecnología de última generación.</p>
+                                </div>
+                            </div>
+                            <div class="security-feature">
+                                <i class="fas fa-user-shield"></i>
+                                <div>
+                                    <h4>Autenticación en Dos Pasos</h4>
+                                    <p>Proteja su cuenta con verificación adicional mediante SMS o app autenticadora.</p>
+                                </div>
+                            </div>
+                            <div class="security-feature">
+                                <i class="fas fa-file-contract"></i>
+                                <div>
+                                    <h4>Protección de Datos</h4>
+                                    <p>Cumplimos con la normativa de protección de datos y privacidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="security-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" style="display: none; padding: 4rem 0;">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="dashboard-welcome">
+                    <h2 id="userFullName"></h2>
+                    <p id="userIdNumber"></p>
+                </div>
+                <div class="stat-card">
+                    <p>Saldo Disponible</p>
+                    <h3><span id="userBalance"></span></h3>
+                </div>
+            </div>
+
+            <!-- User's Cards -->
+            <div class="user-cards">
+                <h3>Mis Tarjetas</h3>
+                <div class="user-cards-container" id="userCardsContainer">
+                    <!-- User cards will be loaded here by JS -->
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <div class="action-card" id="transferBtn">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Transferencias</h3>
+                    <p>Envía dinero a otras cuentas</p>
+                </div>
+                <div class="action-card" id="payBillsBtn">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Pagos Servicios</h3>
+                    <p>Paga tus facturas en segundos</p>
+                </div>
+                <div class="action-card" id="requestCardBtn">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Gestión de tarjetas</h3>
+                    <p>Solicita o administra tus tarjetas</p>
+                </div>
+                <div class="action-card" id="downloadStatementBtn">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Extractos PDF</h3>
+                    <p>Descarga tus estados de cuenta</p>
+                </div>
+            </div>
+
+            <div class="transactions">
+                <h3>Últimas Transacciones</h3>
+                <ul class="transaction-list" id="transactionList">
+                    <!-- Transactions will be loaded here by JS -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeLoginModal">&times;</span>
+            <form class="login-form" id="loginForm">
+                <h2>Acceso Seguro</h2>
+                <div id="login-error" class="error-message" style="display: none;"></div>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-lock-open"></i> Ingresar</button>
+                <p class="form-switch">¿No tienes cuenta? <a href="#" id="switchToRegister">Regístrate aquí</a></p>
+                <div class="security-badge"><i class="fas fa-shield-alt"></i> Conexión segura y encriptada.</div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeRegisterModal">&times;</span>
+            <h2>Crea tu Cuenta en Banco Nova</h2>
+            <form id="registerForm">
+                <div id="register-error" class="error-message" style="display: none;"></div>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Nombre Completo" required>
+                </div>
+                <div class="form-group">
+                    <select name="idType" required>
+                        <option value="" disabled selected>Tipo de Documento</option>
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="idNumber" placeholder="Número de Documento" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Crea una Contraseña" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="confirmPassword" placeholder="Confirma tu Contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+                <p class="form-switch">¿Ya tienes cuenta? <a href="#" id="switchToLogin">Ingresa aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Transfer Modal -->
+    <div id="transferModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeTransferModal">&times;</span>
+            <h2>Realizar Transferencia</h2>
+            <form id="transferForm">
+                <div id="transfer-error" class="error-message" style="display: none;"></div>
+                <div class="form-group">
+                    <input type="email" name="recipientEmail" placeholder="Correo del destinatario" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="amount" placeholder="Monto a transferir ($)" required min="1" step="0.01">
+                </div>
+                <button type="submit" class="btn btn-primary">Transferir Ahora</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Request Card Modal -->
+    <div id="requestCardModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeRequestCardModal">&times;</span>
+            <h2>Gestión de Tarjetas</h2>
+
+            <div id="cardSelectionStep">
+                <div class="card-preview-container" id="cardPreviewContainer">
+                    <!-- Card preview will be injected here -->
+                </div>
+                <div id="request-card-error" class="error-message" style="display: none;"></div>
+                <div class="form-group">
+                    <label for="cardTypeSelect">Selecciona una tarjeta para solicitar:</label>
+                    <select name="cardType" id="cardTypeSelect" required>
+                        <option value="" disabled selected>Elige un tipo de tarjeta...</option>
+                        <option value="debit">Tarjeta de Débito</option>
+                        <option value="classic">Crédito Clásica</option>
+                        <option value="gold">Crédito Oro</option>
+                        <option value="platinum">Crédito Platinum</option>
+                    </select>
+                </div>
+                <button type="button" id="goToConfirmBtn" class="btn btn-primary">Continuar</button>
+            </div>
+
+            <div id="cardConfirmationStep" style="display: none;">
+                <p id="confirmationText" style="margin-bottom: 1.5rem;"></p>
+                <div class="confirmation-buttons">
+                    <button id="confirmCardRequestBtn" class="btn btn-success">Sí, confirmar</button>
+                    <button id="cancelCardRequestBtn" class="btn btn-outline">Cancelar</button>
+                </div>
+            </div>
+
+            <div id="cardSuccessStep" style="display: none;">
+                <h3 style="color: var(--success); margin-bottom: 1rem;">¡Tu tarjeta ha sido aprobada!</h3>
+                <div id="finalCardContainer" style="margin-bottom: 2rem;"></div>
+                <button id="finishCardRequestBtn" class="btn btn-primary">Finalizar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pay Bills Modal -->
+    <div id="payBillsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closePayBillsModal">&times;</span>
+            <h2>Pagar Servicios</h2>
+            <form id="payBillsForm">
+                <div id="pay-bills-error" class="error-message" style="display: none;"></div>
+                <div class="form-group">
+                    <label for="serviceTypeSelect">Servicio a pagar:</label>
+                    <select name="serviceType" id="serviceTypeSelect" required>
+                        <option value="" disabled selected>Elige un servicio...</option>
+                        <option value="Luz">Luz (ENEL)</option>
+                        <option value="Agua">Agua (EPM)</option>
+                        <option value="Internet">Internet (TIGO)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="reference" placeholder="Número de referencia" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="amount" placeholder="Monto a pagar ($)" required min="1" step="0.01">
+                </div>
+                <button type="submit" class="btn btn-primary">Confirmar Pago</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <p id="notificationMessage"></p>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Banco Nova</h3>
+                    <p>Su socio financiero de confianza. Comprometidos con su seguridad y crecimiento financiero.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="#productos">Cuentas</a></li>
+                        <li><a href="#tarjetas">Tarjetas</a></li>
+                        <li><a href="#inicio">Créditos</a></li>
+                        <li><a href="#productos">Inversiones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Soporte</h3>
+                    <ul>
+                        <li><a href="#contacto">Chat en Línea</a></li>
+                        <li><a href="#contacto">WhatsApp</a></li>
+                        <li><a href="#contacto">Teléfono</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#seguridad">Política de Privacidad</a></li>
+                        <li><a href="#seguridad">Términos y Condiciones</a></li>
+                        <li><a href="#seguridad">Página de Seguridad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Banco Nova. Todos los derechos reservados. Superintendencia Financiera de Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
